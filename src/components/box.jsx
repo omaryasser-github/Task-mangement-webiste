@@ -1,5 +1,6 @@
 import React from "react";
 import Icons from "./Icons";
+import clsx from "clsx";
 
 export default React.memo(function Box({
   label,
@@ -7,10 +8,16 @@ export default React.memo(function Box({
   onClick,
   taskData = {},
   isSelected,
+  className = ""
 }) {
   const handleClick = () => {
     if (onClick) onClick(taskData);
   };
+    const IconComponent = taskData.icon ? (
+    <Icons icon={taskData.icon} />
+  ) : taskData.iconImage ? (
+    <img src={taskData.iconImage} alt="icon" className="w-6 h-6"/>
+  ) : null;
 
   return (
     <div
@@ -20,8 +27,8 @@ export default React.memo(function Box({
       onClick={handleClick}
     >
       <div className="flex items-center">
-        <span className="rounded-xl w-12 h-12 bg-white flex items-center justify-center mr-4">
-          <Icons icon={taskData.icon} />
+        <span className={clsx ("rounded-xl w-12 h-12 border-2 bg-white flex items-center justify-center mr-4", taskData.className) }>
+           {IconComponent}
         </span>
         <div>
           <div className="font-bold text-xl text-gray-900">{label}</div>
@@ -39,7 +46,7 @@ export default React.memo(function Box({
       </div>
       {taskData.actionIcon && (
         <span
-          className={`${taskData.actionBg} rounded-xl w-10 h-10 flex items-center justify-center`}
+          className={clsx(" rounded-xl w-10 h-10 flex items-center justify-center", taskData.actionBg)}
         >
           <img src={taskData.actionIcon} alt="action" className="w-6 h-6" />
         </span>

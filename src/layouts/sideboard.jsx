@@ -7,7 +7,7 @@ import close_ring_duotone from "../assets/close_ring_duotone-1.svg";
 import Button from "../components/button";
 import StatusSelector from "../components/status";
 import Inputfield from "../components/Inputfield";
-import Icon from "../components/icons";
+import Icon from "../components/Icons";
 
 
 export default function SideBoard({ isOpen, onClose, taskData }) {
@@ -36,7 +36,7 @@ export default function SideBoard({ isOpen, onClose, taskData }) {
 
   return (
     <div
-      className={`fixed rounded-2xl top-2 right-2 bottom-2 h-80% w-full sm:w-[30rem] md:w-[60rem] lg:w-[100rem] max-w-full sm:max-w-[80vw] md:max-w-[40rem] bg-white shadow-lg z-50 transform transition-transform duration-300 ${
+      className={`fixed rounded-2xl top-2 right-2 bottom-2  w-full sm:w-[30rem] md:w-[60rem] lg:w-[100rem] max-w-full sm:max-w-[80vw] md:max-w-[40rem] bg-white shadow-lg z-50 transform transition-transform duration-300 ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
       style={{ boxShadow: "0 0 20px rgba(0,0,0,0.1)" }}
@@ -47,7 +47,7 @@ export default function SideBoard({ isOpen, onClose, taskData }) {
         {/* Header */}
         <header className="flex justify-between items-center p-1">
           <h2 className="text-xl sm:text-2xl font-semibold mb-2">
-            {taskData ? "Edit Task" : "Task details"}
+           Task details
           </h2>
           <button
             onClick={onClose}
@@ -65,7 +65,7 @@ export default function SideBoard({ isOpen, onClose, taskData }) {
           value={taskName}
           onChange={(e) => setTaskName(e.target.value)}
           placeholder="Enter task name"
-          className="h-[40px]" // أو أي حجم تحبه
+          className="h-[40px]" 
         />
 
         {/* Description */}
@@ -75,7 +75,7 @@ export default function SideBoard({ isOpen, onClose, taskData }) {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           placeholder="Short description"
-          className="min-h-[100px]" // التحكم في الحجم من هنا
+          className="min-h-[100px]" 
         />
 
         {/* Icons selection */}
@@ -90,8 +90,8 @@ export default function SideBoard({ isOpen, onClose, taskData }) {
                 icon={icn}
                 selected={icon === icn}
                 onClick={() => setIcon(icn)}
-                bgColor="#E3E8EF" // ✅ اللون لما مش مختار
-                selectedBgColor="#F5D565" // ✅ اللون لما الزرار مختار
+                bgColor="#E3E8EF" 
+                selectedBgColor="#F5D565" 
                 aria-label={`Select icon ${idx + 1}`}
               />
             ))}

@@ -46,7 +46,9 @@ export const tasks = [
     state: "add",
     label: "Add new task",
     bg: "#F5E8D5",
-    actionBg: "bg-yellow-500",
-    actionIcon: AddIcon,
+    iconImage: AddIcon,
+    className: "bg-yellow-500",
+    // actionBg: "bg-yellow-500",
+    // actionIcon: AddIcon,
   },
 ];

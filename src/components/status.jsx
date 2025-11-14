@@ -1,4 +1,4 @@
-import Icon from "./icons";
+import Icon from "./Icons";
 import Done_round from "../assets/Done_round.svg";
 
 export default function StatusSelector({ options, value, onChange }) {
