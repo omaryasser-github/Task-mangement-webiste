@@ -1,7 +1,14 @@
-import MainBoard from './pages/mainboard';
+import MainBoard from "./layouts/mainboard";
+import MainLayout from "./layouts/mainlayout";
 
 function App() {
-  return <MainBoard />;
+  
+  return( 
+      <MainLayout>
+      <MainBoard />
+    </MainLayout>
+
+  )
 }
 
 export default App;

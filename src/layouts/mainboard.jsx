@@ -1,8 +1,7 @@
 import React from "react";
 import logo from "../assets/Logo.svg";
 import Edit_doutone from "../assets/Edit_duotone.svg";
-import Box from "../components/box";
-import MainLayout from "../layouts/mainlayout";
+import Box from "../components/Box";
 import SideBoard from "./sideboard";
 import { tasks } from "../constants/tasks";
 
@@ -18,7 +17,7 @@ export default function MainBoard() {
   };
 
   return (
-    <MainLayout>
+    <div>
       {sidebarOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-30 z-30 transition-opacity duration-300"
@@ -68,6 +67,6 @@ export default function MainBoard() {
           />
         ))}
       </main>
-    </MainLayout>
+    </div>
   );
 }

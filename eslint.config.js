@@ -20,7 +20,7 @@ export default [
     },
     rules: {
       // 💡 General JavaScript Rules
-      'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      // 'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       'no-console': 'warn',
       'no-empty': 'warn',
       'no-multi-spaces': 'error',

@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "../components/icons";
+import Icons from "./Icons";
 
 export default React.memo(function Box({
   label,
@@ -21,7 +21,7 @@ export default React.memo(function Box({
     >
       <div className="flex items-center">
         <span className="rounded-xl w-12 h-12 bg-white flex items-center justify-center mr-4">
-          <Icon icon={taskData.icon} />
+          <Icons icon={taskData.icon} />
         </span>
         <div>
           <div className="font-bold text-xl text-gray-900">{label}</div>
